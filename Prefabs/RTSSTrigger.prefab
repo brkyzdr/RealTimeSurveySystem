@@ -90,5 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6f62e2663748747b312781d24cd5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: "Bu k\u0131sm\u0131 e\u011Flenceli buldunuz mu?"
-  googleFormURL: https://docs.google.com/forms/d/e/your-form-id/viewform?usp=pp_url&entry.1234567890=
+  question: "1. k\u0131sm\u0131 e\u011Flenceli buldunuz mu?"
+  questionType: 0
+  entryID: entry.1541515394
+  isFinalTrigger: 0
+  pauseGameOnSurvey: 1
