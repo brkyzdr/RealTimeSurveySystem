@@ -2,8 +2,22 @@
 
 public class SurveyTrigger : MonoBehaviour
 {
+    [Header("📝 Anket Sorusu")]
+    [Tooltip("Bu tetikleyici çalıştığında gösterilecek soru.")]
+    [TextArea(2, 4)]
     public string question = "Bu kısmı eğlenceli buldunuz mu?";
-    public string googleFormURL = "https://docs.google.com/forms/d/e/your-form-id/viewform?usp=pp_url&entry.1234567890=";
+
+    [Header("🌐 Google Form Bilgileri")]
+    [Tooltip("Google Form bağlantınızın başı. 'entry.xxxx=' kısmı hariç.")]
+    [TextArea(1, 3)]
+    public string baseFormURL = "https://docs.google.com/forms/d/e/.../viewform?usp=pp_url";
+
+    [Tooltip("Bu sorunun bağlı olduğu entry ID. Örn: entry.1234567890")]
+    public string entryID = "entry.1234567890";
+
+    [Header("⚙️ Ayarlar")]
+    [Tooltip("Soru gösterilirken oyun duraklasın mı?")]
+    public bool pauseGameOnSurvey = true;
 
     private bool triggered = false;
 
@@ -12,6 +26,17 @@ public class SurveyTrigger : MonoBehaviour
         if (triggered || !other.CompareTag("Player")) return;
         triggered = true;
 
-        FindObjectOfType<SurveyManager>().ShowSurvey(question, googleFormURL);
+        string fullURL = $"{baseFormURL}&{entryID}=";
+
+        if (pauseGameOnSurvey)
+            Time.timeScale = 0;
+
+        SurveyManager.Instance.ShowSurvey(question, fullURL, ResumeGameAfterSurvey);
+    }
+
+    private void ResumeGameAfterSurvey()
+    {
+        if (pauseGameOnSurvey)
+            Time.timeScale = 1;
     }
 }
