@@ -3,20 +3,20 @@ using UnityEngine.UI;
 
 public class SurveyUI : MonoBehaviour
 {
-    [Header("Genel")]
+    [Header("General")]
     public Text questionText;
 
-    [Header("Evet / Hayır Paneli")]
+    [Header("Yes / No Panel")]
     public GameObject yesNoPanel;
-    public Button answerButton1; // Evet
-    public Button answerButton2; // Hayır
+    public Button answerButton1; // Yes
+    public Button answerButton2; // No
 
-    [Header("Paragraf Paneli")]
+    [Header("Paragraph Panel")]
     public GameObject paragraphPanel;
     public InputField paragraphInput;
     public Button submitParagraph;
 
-    [Header("Skala Paneli (1–10)")]
+    [Header("Scale Panel (1–10)")]
     public GameObject scalePanel;
     public Slider scaleSlider;
     public Text scaleValueText;
@@ -31,18 +31,18 @@ public class SurveyUI : MonoBehaviour
         entryID = entry;
         onAnswerSubmitted = onComplete;
 
-        // Tüm panelleri devre dışı bırak
+        // Disable all panels
         yesNoPanel.SetActive(false);
         paragraphPanel.SetActive(false);
         scalePanel.SetActive(false);
 
-        // Soru tipine göre doğru paneli göster
+        // Activate the correct panel based on the question type
         switch (type)
         {
             case SurveyQuestionType.YesNo:
                 yesNoPanel.SetActive(true);
-                answerButton1.onClick.AddListener(() => SubmitAnswer("Evet"));
-                answerButton2.onClick.AddListener(() => SubmitAnswer("Hayır"));
+                answerButton1.onClick.AddListener(() => SubmitAnswer("Yes"));
+                answerButton2.onClick.AddListener(() => SubmitAnswer("No"));
                 break;
 
             case SurveyQuestionType.Paragraph:

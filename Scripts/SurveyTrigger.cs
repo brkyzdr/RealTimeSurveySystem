@@ -1,17 +1,18 @@
 ﻿using UnityEngine;
+
 public class SurveyTrigger : MonoBehaviour
 {
-    [Header("Anket Sorusu")]
+    [Header("Survey Question")]
     [TextArea(2, 4)]
-    public string question = "Bu kısmı eğlenceli buldunuz mu?";
+    public string question = "Did you find this part enjoyable?";
 
     public SurveyQuestionType questionType = SurveyQuestionType.YesNo;
 
     [Header("Google Form Entry ID")]
-    [Tooltip("Bu sorunun Google Form'daki entry ID'si")]
+    [Tooltip("The entry ID of this question in your Google Form")]
     public string entryID = "entry.1234567890";
 
-    [Header("Ayarlar")]
+    [Header("Settings")]
     public bool isFinalTrigger = false;
     public bool pauseGameOnSurvey = true;
 
@@ -41,11 +42,9 @@ public class SurveyTrigger : MonoBehaviour
     }
 }
 
-
 public enum SurveyQuestionType
 {
     YesNo,
     Paragraph,
     Scale1to10
 }
-

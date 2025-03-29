@@ -10,10 +10,10 @@ public class SurveyManager : MonoBehaviour
 
     private GameObject currentSurveyUI;
 
-    // Yeni: Cevapları saklamak için
+    // Stores the answers for all survey questions
     private Dictionary<string, string> answers = new Dictionary<string, string>();
 
-    // Google Form linkinin ana kısmı
+    // Base URL of the Google Form (should not include any entry parameters)
     [TextArea]
     public string baseFormURL = "https://docs.google.com/forms/d/e/.../viewform?usp=pp_url";
 
@@ -52,7 +52,7 @@ public class SurveyManager : MonoBehaviour
             finalURL += $"&{entry.Key}={UnityWebRequest.EscapeURL(entry.Value)}";
         }
 
-        Debug.Log("RTSS: Tüm cevaplar gönderiliyor → " + finalURL);
+        Debug.Log("RTSS: Submitting all answers → " + finalURL);
         Application.OpenURL(finalURL);
     }
 }

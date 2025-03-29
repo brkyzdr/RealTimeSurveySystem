@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surveyUIPrefab: {fileID: 1912060258990420165}
-  baseFormURL: https://docs.google.com/forms/d/e/1FAIpQLSdiMy0UDwVlUlkLsR4AmBvmtlEtYyfxoPq6YJ2jrQF8a5IAdw/viewform?usp=pp_url
+  baseFormURL: 
 --- !u!1 &1912060258990420165
 GameObject:
   m_ObjectHideFlags: 0

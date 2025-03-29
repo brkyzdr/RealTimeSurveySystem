@@ -92,6 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: "1. k\u0131sm\u0131 e\u011Flenceli buldunuz mu?"
   questionType: 0
-  entryID: entry.1541515394
+  entryID: 
   isFinalTrigger: 0
   pauseGameOnSurvey: 1
