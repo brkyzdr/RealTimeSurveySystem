@@ -6,14 +6,16 @@ public class SurveyTriggerTimer : MonoBehaviour
     public SurveyQuestionData questionData;
 
     [Header("Trigger Settings")]
-    public float delayInSeconds = 5f;
+    [Tooltip("Trigger will activate after this many minutes.")]
+    public float delayInMinutes = 1f;
+
     public bool pauseGameOnSurvey = true;
 
     private bool triggered = false;
 
     void Start()
     {
-        Invoke(nameof(TriggerSurvey), delayInSeconds);
+        Invoke(nameof(TriggerSurvey), delayInMinutes * 60f);
     }
 
     private void TriggerSurvey()
