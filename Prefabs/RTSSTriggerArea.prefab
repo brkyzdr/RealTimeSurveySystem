@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 92145805942013819}
   - component: {fileID: 3558027299270310673}
   m_Layer: 0
-  m_Name: RTSSTrigger
+  m_Name: RTSSTriggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -90,8 +90,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6f62e2663748747b312781d24cd5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  question: "1. k\u0131sm\u0131 e\u011Flenceli buldunuz mu?"
-  questionType: 0
-  entryID: 
-  isFinalTrigger: 0
+  questionData: {fileID: 0}
   pauseGameOnSurvey: 1

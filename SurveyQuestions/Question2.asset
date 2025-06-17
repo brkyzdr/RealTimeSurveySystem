@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b4564b47ee439348a8c273af807e1e2, type: 3}
   m_Name: Question2
   m_EditorClassIdentifier: 
-  questionText: 
-  entryID: 
-  questionType: 0
+  questionText: 'TEST scale '
+  entryID: entry.1908722198
+  questionType: 2
   isFinal: 0
