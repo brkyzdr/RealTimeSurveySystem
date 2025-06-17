@@ -1,7 +1,4 @@
-
-===============================
 RTSS - Real-Time Survey System
-===============================
 
 Unity Compatibility: 2D & 3D Projects & VR
 Author: Berkay Ozder
