@@ -2,7 +2,8 @@ RTSS - Real-Time Survey System
 ===============================
 Unity Compatibility: 2D & 3D Projects & VR  
 Author: Berkay Özder  
-
+📦 Download RTSS v2.1 UnityPackage  
+👉 [Download from Releases](https://github.com/brkyzdr/RealTimeSurveySystem/releases)
 -------------------------------
 🔧 Overview
 -------------------------------
